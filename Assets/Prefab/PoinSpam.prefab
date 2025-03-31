@@ -109,7 +109,7 @@ MonoBehaviour:
   - {fileID: 5620192553255112546, guid: 95a3894e0defc5e43883580df34193d3, type: 3}
   - {fileID: 2342176681940555764, guid: 08a1456a490dbf140ba3046612471975, type: 3}
   Target: {fileID: 2751193189742983206}
-  times: 2
+  times: 1
   twotimes: 6
 --- !u!1 &6761485658963335708
 GameObject:

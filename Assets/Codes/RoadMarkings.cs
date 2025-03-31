@@ -9,40 +9,38 @@ public class RoadMarkings : MonoBehaviour
     
     public Transform WaypointsL;
     public Transform WaypointsR;
-
-    public float time;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float timer = 1f;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "player")
+        if (other.CompareTag("Player"))
         {
-            fireB();
+            StartCoroutine(FireBullets()); // Khởi động coroutine
         }
     }
 
-    private IEnumerator fireB()
+    private IEnumerator FireBullets()
     {
-        while (true)
-        {
-            Instantiate(BulletSlow, WaypointsL.position, WaypointsL.rotation);
-            Instantiate(BulletSlow, WaypointsR.position, WaypointsR.rotation);
-            
-            yield return new WaitForSeconds(time);
-            
-            Instantiate(BulletStop, WaypointsL.position, WaypointsL.rotation);
-            Instantiate(BulletStop, WaypointsR.position, WaypointsR.rotation);
-        }
+        // Tạo viên đạn chậm
+        Instantiate(BulletSlow, WaypointsL.position, WaypointsL.rotation);
+        Instantiate(BulletSlow, WaypointsR.position, WaypointsR.rotation);
+        
+        // Chờ 1 giây
+        yield return new WaitForSeconds(timer);
+        
+        // Tạo viên đạn dừng lại
+        Instantiate(BulletStop, WaypointsL.position, WaypointsL.rotation);
+        Instantiate(BulletStop, WaypointsR.position, WaypointsR.rotation);
     }
 }

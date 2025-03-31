@@ -153,7 +153,7 @@ MonoBehaviour:
   BulletStop: {fileID: 2165088692110128334, guid: 6b938ae57e3b13f4380cacdec4492253, type: 3}
   WaypointsL: {fileID: 1311038320649661545}
   WaypointsR: {fileID: 8068055689900712214}
-  time: 2
+  timer: 1.5
 --- !u!1 &2781940133010471685
 GameObject:
   m_ObjectHideFlags: 0

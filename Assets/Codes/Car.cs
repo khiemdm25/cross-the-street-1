@@ -6,7 +6,6 @@ public class Car : MonoBehaviour
     public float speed;
     public float slowspeed;
 
-
     public Rigidbody2D rb;
     
 
@@ -14,6 +13,8 @@ public class Car : MonoBehaviour
     private float coutt;
     public float timeslow;
     public float timestop;
+    
+    public float timesDestroy;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,6 +38,8 @@ public class Car : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Slow"))
         {
+            print("slow");
+            
             speed *= slowspeed;
             coutl += Time.deltaTime;
             if (coutl >= timeslow)
@@ -45,7 +48,7 @@ public class Car : MonoBehaviour
                 coutl = 0;
             }
         }
-        else if(other.gameObject.CompareTag("Stop"))
+        if(other.gameObject.CompareTag("Stop"))
         {
             float newspeed = speed;
             speed *= 0;
@@ -61,7 +64,13 @@ public class Car : MonoBehaviour
         {
             FindObjectOfType<PoolingCar>().ReturnCar(gameObject); 
         }*/
-        
+    }
+    
+    
+
+    public void destroyCar()
+    {
+        Destroy(gameObject, timesDestroy);
     }
     
     

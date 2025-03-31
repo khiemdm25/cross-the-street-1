@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3777619517330129261}
   m_Layer: 0
   m_Name: cars_5
-  m_TagString: Untagged
+  m_TagString: car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,11 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6424c59ba072f734ab0ed4cf4e5f3540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 13
   slowspeed: 0
   rb: {fileID: 7949326060630315969}
   timeslow: 0
   timestop: 0
+  timesDestroy: 4
 --- !u!50 &7949326060630315969
 Rigidbody2D:
   serializedVersion: 5

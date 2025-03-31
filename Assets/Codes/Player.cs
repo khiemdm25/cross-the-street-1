@@ -24,9 +24,17 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        // if (other.gameObject.CompareTag("bien"))
+        // {
+        //     turn();
+        // }
+    }
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("car"))
         {
-            turn();
+            Time.timeScale = 0;
         }
     }
 

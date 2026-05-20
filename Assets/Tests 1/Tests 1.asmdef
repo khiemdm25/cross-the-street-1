@@ -1,0 +1,27 @@
+{
+    "name": "Tests1",
+    "rootNamespace": "",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Unity.InputSystem.ForUI",
+        "Unity.InputSystem",
+        "Unity.InputSystem.IntegrationTests",
+        "Unity.InputSystem.TestFramework",
+        "UnityEngine.UI.Tests",
+        "NewAssembly"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -8,6 +8,11 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+
+    public int countdow = 3;
+    
+    public int score;
+    
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,7 +24,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Moving();
+       // Moving();
+        
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -36,6 +42,7 @@ public class Player : MonoBehaviour
         {
             Time.timeScale = 0;
         }
+        
     }
 
     void turn()
@@ -43,16 +50,27 @@ public class Player : MonoBehaviour
         transform.Rotate(0, 0, 180);
     }
 
-    void Moving()
+    // void Moving()
+    // {
+    //     if (Input.GetKey(KeyCode.Space))
+    //     {
+    //         rb.linearVelocity = Vector2.up * moveSpeed;
+    //     }
+    //     else
+    //     {
+    //         rb.linearVelocity = Vector2.zero;
+    //     }
+    // }
+
+
+    public void congdiem(int count)
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            rb.linearVelocity = Vector2.up * moveSpeed;
-        }
-        else
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
+        countdow += count;
+    }
+
+    public void trudiem(int count)
+    {
+        countdow -= count;
     }
     
 }

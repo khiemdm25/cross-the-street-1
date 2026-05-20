@@ -7,6 +7,7 @@ TagManager:
   - Slow
   - Stop
   - car
+  - playgame
   layers:
   - Default
   - TransparentFX
